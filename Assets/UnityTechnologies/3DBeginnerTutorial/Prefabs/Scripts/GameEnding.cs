@@ -12,7 +12,7 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
-    public float totalTime;
+    public float totalTime = 120f;
     
 
     bool m_IsPlayerAtExit;
@@ -55,6 +55,7 @@ public class GameEnding : MonoBehaviour
             EndLevel(caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
     }
+
     IEnumerator InGameTimer()
     {
         yield return new WaitForSeconds(1);

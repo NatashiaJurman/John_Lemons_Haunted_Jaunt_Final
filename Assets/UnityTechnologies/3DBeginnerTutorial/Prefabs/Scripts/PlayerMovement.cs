@@ -6,11 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
 
+    // Should this be private?
+    public float sprintModifier = 1.75f;
+
     Animator m_Animator;
     Rigidbody m_Rigidbody;
     AudioSource m_AudioSource;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
+    
 
     void Start()
     {
@@ -26,6 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
         m_Movement.Set(horizontal, 0f, vertical);
         m_Movement.Normalize();
+
+        // Sprint Minor Mod
+        if (Input.GetButton("Sprint"))
+        {
+            m_Movement *= sprintModifier;
+            Debug.Log("I'm running!");
+        }
 
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
