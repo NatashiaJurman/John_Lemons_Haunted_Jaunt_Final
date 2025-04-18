@@ -400,6 +400,7 @@
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/LightFlicker.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/Observer.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/PlayerMovement.cs"
+"Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/ReaperChase.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/WaypointPatrol.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
