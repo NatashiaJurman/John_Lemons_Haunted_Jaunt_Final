@@ -9,8 +9,8 @@ public class MainUI : MonoBehaviour
     public float totalTime = 120f;
     public TextMeshProUGUI timerText;
 
-    public Image blankFrame;
-    public Image sprintFrame;
+    public GameObject blankFrame;
+    public GameObject sprintFrame;
 
     private bool isSprinting;
     
@@ -49,14 +49,14 @@ public class MainUI : MonoBehaviour
     {
         if (isSprinting == true)
         {
-            sprintFrame.enabled = true;
-            blankFrame.enabled = false;
+            sprintFrame.SetActive(true);
+            blankFrame.SetActive(false);
         }
 
         else if (isSprinting == false) 
         {
-            sprintFrame.enabled = false;
-            blankFrame.enabled = true;
+            sprintFrame.SetActive(false);
+            blankFrame.SetActive(true);
         }
     }
 
