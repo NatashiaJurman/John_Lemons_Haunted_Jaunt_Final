@@ -398,6 +398,7 @@
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/GameEnding.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/GameManager.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/LightFlicker.cs"
+"Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/MainUI.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/Observer.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/PlayerMovement.cs"
 "Assets/UnityTechnologies/3DBeginnerTutorial/Prefabs/Scripts/ReaperChase.cs"
