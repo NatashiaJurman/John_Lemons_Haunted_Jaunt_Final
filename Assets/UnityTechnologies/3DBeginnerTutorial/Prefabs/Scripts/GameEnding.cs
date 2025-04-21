@@ -63,10 +63,6 @@ public class GameEnding : MonoBehaviour
         StartCoroutine(InGameTimer());
     }
 
-
-
-
-
     void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
         if (!m_HasAudioPlayed)
