@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Should this be private?
     public float sprintModifier = 1.75f;
+    public bool sprint;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -31,12 +32,7 @@ public class PlayerMovement : MonoBehaviour
         m_Movement.Set(horizontal, 0f, vertical);
         m_Movement.Normalize();
 
-        // Sprint Minor Mod
-        if (Input.GetButton("Sprint"))
-        {
-            m_Movement *= sprintModifier;
-            Debug.Log("I'm running!");
-        }
+        IsSprinting();
 
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
@@ -57,6 +53,16 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation(desiredForward);
+    }
+
+    // Sprint Minor Mod
+    void IsSprinting()
+    {
+        if (Input.GetButton("Sprint"))
+        {
+            m_Movement *= sprintModifier;
+            Debug.Log("I'm running!");
+        }
     }
 
     void OnAnimatorMove()

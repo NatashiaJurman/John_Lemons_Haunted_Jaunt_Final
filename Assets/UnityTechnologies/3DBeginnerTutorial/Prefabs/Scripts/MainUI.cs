@@ -11,8 +11,6 @@ public class MainUI : MonoBehaviour
 
     public GameObject blankFrame;
     public GameObject sprintFrame;
-
-    private bool isSprinting;
     
 
     // Start is called before the first frame update
@@ -47,13 +45,13 @@ public class MainUI : MonoBehaviour
 
     void SprintUI()
     {
-        if (isSprinting == true)
-        {
+        if (Input.GetButton("Sprint"))
+            {
             sprintFrame.SetActive(true);
             blankFrame.SetActive(false);
         }
 
-        else if (isSprinting == false) 
+        else  
         {
             sprintFrame.SetActive(false);
             blankFrame.SetActive(true);
